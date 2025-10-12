@@ -1,0 +1,98 @@
+/* Fonts */
+.font-display {
+    font-family: 'Playfair Display', serif;
+}
+.font-body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Background texture */
+.bg-bordo-texture {
+    background-image: url(images/background/red-carpet-bg.jpeg);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: repeat;
+    background-color: #7d0a28; /* Fallback color */
+}
+
+.bg-dark-blue-texture {
+    background-image: url(images/background/dark-blue-carpet-bg.jpeg);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: repeat;
+    background-color: #222021; /* Fallback color */
+}
+
+/* HEADER */
+.header-logo {
+    height: 82px; 
+    width: auto;
+}
+
+/* CLIENTS */
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.carousel-track {
+    display: flex;
+    animation: scroll-left 30s linear infinite; /* Ajuste a duração conforme necessário */
+}
+.carousel-item {
+    flex: 0 0 auto; /* Não permite que os itens cresçam ou encolham */
+    width: 200px; /* Largura fixa para cada logo */
+    margin-right: 2rem; /* Espaçamento entre os logos */
+}
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%) opacity(60%);
+    transition: filter 0.3s ease-in-out;
+}
+.carousel-item img:hover {
+    filter: grayscale(0%) opacity(100%);
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-200px * 8 - 2rem * 8)); } /* (Largura do item * número de itens) + (margin-right * número de itens) */
+}
+/* Para telas menores, você pode querer ajustar o número de itens visíveis ou a largura */
+@media (max-width: 768px) {
+    .carousel-track {
+        animation: scroll-left-sm 20s linear infinite; /* Velocidade diferente para mobile */
+    }
+    @keyframes scroll-left-sm {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-150px * 8 - 1rem * 8)); } /* Ajuste para mobile se a largura do item for diferente */
+    }
+    .carousel-item {
+        width: 150px;
+        margin-right: 1rem;
+    }
+}
+
+.inclusions-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem; 
+    color: #4b5563; 
+}
+
+.inclusions-list .icon {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+    color: #d4af37; 
+}
+
+.inclusions-list.dark-text li {
+    color: #f5f5f5;
+}
+
+.inclusions-list.dark-text .icon {
+    color: #f5f5f5;
+}
