@@ -14,34 +14,43 @@ tailwind.config = {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.getElementById('menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const iconOpen = document.getElementById('menu-icon-open');
-    const iconClose = document.getElementById('menu-icon-close');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('mobile-menu-icon-open');
+  const iconClose = document.getElementById('mobile-menu-icon-close');
 
-    const toggleMenu = () => {
-        // Alterna a visibilidade do menu
-        mobileMenu.classList.toggle('hidden');
-        
-        // Alterna os ícones do botão
-        iconOpen.classList.toggle('hidden');
-        iconClose.classList.toggle('hidden');
-    };
+  if (!btn || !menu) return;
 
-    // 1. Alterna o menu ao clicar no botão
-    if (menuButton) {
-        menuButton.addEventListener('click', toggleMenu);
+  const openMenu = () => {
+    menu.classList.remove('hidden');
+    btn.setAttribute('aria-expanded', 'true');
+    iconOpen.classList.add('hidden');
+    iconClose.classList.remove('hidden');
+  };
+
+  const closeMenu = () => {
+    menu.classList.add('hidden');
+    btn.setAttribute('aria-expanded', 'false');
+    iconOpen.classList.remove('hidden');
+    iconClose.classList.add('hidden');
+  };
+
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    if (menu.classList.contains('hidden')) openMenu();
+    else closeMenu();
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      if (!menu.classList.contains('hidden')) closeMenu();
     }
+  });
 
-    // 2. Fecha o menu quando um link é clicado (para navegação em seção)
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            // Garante que o menu só feche se estiver aberto (não contiver 'hidden')
-            if (!mobileMenu.classList.contains('hidden')) {
-                toggleMenu();
-            }
-        });
-    });
+  // Close on ESC
+  window.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
 });
