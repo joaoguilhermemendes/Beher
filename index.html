@@ -13,48 +13,54 @@
 
 <body class="font-body text-gray-800 bg-creme">
     <!-- HEADER -->
-    <header class="top-0 z-50 bg-white shadow-lg/50 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <a href="#">
-                    <img src="images/logos/beher-logo.webp" alt="Logo Beher Business" class="header-logo">
-                </a>
-                
-                <!-- Navegation bar (Desktop) -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#metodologia" class="text-gray-600 hover:text-bordo transition duration-300 uppercase text-sm font-semibold">Metodologia</a>
-                    <a href="#servicos" class="text-gray-600 hover:text-bordo transition duration-300 uppercase text-sm font-semibold">Serviços</a>
-                    <a href="#pacotes" class="text-gray-600 hover:text-bordo transition duration-300 uppercase text-sm font-semibold">Pacotes</a>
-                    <a href="#sobre" class="text-gray-600 hover:text-bordo transition duration-300 uppercase text-sm font-semibold">Sobre</a>
-                    <a href="#contato" class="text-gray-600 hover:text-bordo transition duration-300 uppercase text-sm font-semibold">Contato</a>
-                </nav>
-                
-                <!-- CTA Btn -->
-                <a href="#contato" class="hidden md:inline-block bg-bordo text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-bordo-light transition duration-300 shadow-lg">
-                    FALE CONOSCO
-                </a>
-                
-                <!-- Mobile Menu -->
-                <button class="md:hidden text-bordo focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-            <!-- Menu Dropdown Mobile -->
-             <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <nav class="flex flex-col space-y-2 px-2 pt-2">
-                    <a href="#metodologia" class="mobile-link text-gray-700 hover:bg-creme/50 hover:text-bordo transition duration-300 block px-3 py-2 rounded-md text-base font-medium uppercase font-semibold">Metodologia</a>
-                    <a href="#servicos" class="mobile-link text-gray-700 hover:bg-creme/50 hover:text-bordo transition duration-300 block px-3 py-2 rounded-md text-base font-medium uppercase font-semibold">Serviços</a>
-                    <a href="#servicos" class="mobile-link text-gray-700 hover:bg-creme/50 hover:text-bordo transition duration-300 block px-3 py-2 rounded-md text-base font-medium uppercase font-semibold">Pacotes</a>
-                    <a href="#sobre" class="mobile-link text-gray-700 hover:bg-creme/50 hover:text-bordo transition duration-300 block px-3 py-2 rounded-md text-base font-medium uppercase font-semibold">Sobre</a>
-                    <a href="#contato" class="mobile-link text-gray-700 hover:bg-creme/50 hover:text-bordo transition duration-300 block px-3 py-2 rounded-md text-base font-medium uppercase font-semibold">Contato</a>
-                    <a href="#contato" class="mobile-link mt-4 bg-bordo text-white text-center px-4 py-2 rounded-full text-sm font-semibold hover:bg-bordo-light transition duration-300 shadow-md">
-                        FALE CONOSCO
-                    </a>
-                </nav>
-            </div>
+    <header class="relative top-0 z-50 bg-white shadow-lg/50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+            <!-- Logo -->
+            <a href="#">
+                <img src="images/logos/beher-logo.webp" alt="Logo Beher Business" class="header-logo">
+            </a>
+            
+            <!-- Navegation bar (Desktop) -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#metodologia" class="text-gray-700 hover:text-bordo transition">Metodologia</a>
+                <a href="#servicos" class="text-gray-700 hover:text-bordo transition">Serviços</a>
+                <a href="#pacotes" class="text-gray-700 hover:text-bordo transition">Pacotes</a>
+                <a href="#sobre" class="text-gray-700 hover:text-bordo transition">Sobre</a>
+                <a href="#clientes" class="text-gray-700 hover:text-bordo transition">Clientes</a>
+            </nav>
+            
+            <!-- CTA Btn -->
+            <a href="#contato" class="hidden md:inline-block bg-bordo text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-bordo-light transition duration-300 shadow-lg">
+                FALE CONOSCO
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-bordo focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" type="button">
+                <!-- Hamburger (open) -->
+                <svg id="mobile-menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+                <!-- X (close) -->
+                <svg id="mobile-menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
         </div>
-    </header>
+
+        <!-- Menu Dropdown Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4 absolute left-0 right-0 bg-white shadow-md z-50">
+            <nav class="flex flex-col space-y-1 px-4 pt-3">
+                <a href="#metodologia" class="block text-gray-700 py-2 px-3 rounded hover:bg-gray-100">Metodologia</a>
+                <a href="#servicos" class="block text-gray-700 py-2 px-3 rounded hover:bg-gray-100">Serviços</a>
+                <a href="#pacotes" class="block text-gray-700 py-2 px-3 rounded hover:bg-gray-100">Pacotes</a>
+                <a href="#sobre" class="block text-gray-700 py-2 px-3 rounded hover:bg-gray-100">Sobre</a>
+                <a href="#clientes" class="block text-gray-700 py-2 px-3 rounded hover:bg-gray-100">Clientes</a>
+                <a href="#contato" class="block text-bordo font-semibold mt-2 py-2 px-3 rounded hover:bg-bordo/10">Fale conosco</a>
+            </nav>
+        </div>
+    </div>
+</header>
 
     <!-- HERO SECTION - INICIO -->
     <section id="hero" class="relative overflow-hidden pt-16 pb-32 md:pt-24 md:pb-48 bg-white border-b border-gray-200">
@@ -157,7 +163,6 @@
                 <!-- (CARD 01) -->
                 <div class="p-10 bg-creme rounded-2xl shadow-premium border-b-4 border-bordo hover:shadow-2xl transition duration-300">
                     <div class="text-dourado mb-4">
-                        <!-- Ícone Placeholder elegante (ajustável) -->
                         <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v14L9 19z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5v7m-3 0h6m-6 4h6"></path></svg>
                     </div>
                     <h4 class="font-display text-2xl font-semibold text-bordo mb-3">Consultoria Estratégica</h4>
@@ -194,7 +199,7 @@
                 Escolha o nível de acompanhamento ideal para o momento do seu negócio. Cada pacote é um compromisso com a sua visibilidade e lucro.
             </p>
 
-            <!-- Grid de 4 Colunas para Serviços -->
+            <!-- 4 column grid - PACOTES -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 
                 <!-- Card 1: Be Ready -->
@@ -309,19 +314,20 @@
         </div>
     </section>
     
-    <!-- Seção Sobre Nós - Layout Assimétrico (Restaurante 5 Estrelas) -->
+    <!-- SOBRE NOS-->
+    <!-- Assimetric Layout Section -->
     <section id="sobre" class="py-20 md:py-32 bg-creme">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                 
-                <!-- Imagem (8/12) - Foco em Fotografia -->
+                <!-- Image (8/12) -->
                 <div class="lg:col-span-7 relative">
                     <img src="images/background/dark-blue-carpet-bg-.jpeg" class="w-full h-auto rounded-xl shadow-2xl">
                     <!-- Detalhe decorativo -->
                     <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-dourado/20 rounded-full hidden md:block"></div>
                 </div>
                 
-                <!-- Texto (4/12) - Estilo editorial -->
+                <!-- Text (4/12) -->
                 <div class="lg:col-span-5 lg:order-first">
                     <h2 class="font-display text-4xl md:text-5xl font-bold text-bordo mb-6">Nossa Filosofia</h2>
                     <p class="text-xl text-gray-600 mb-6 border-l-4 border-dourado pl-4 italic">
@@ -342,7 +348,8 @@
         </div>
     </section>
 
-    <!-- Nova Seção: Clientes e Parceiros (Carrossel Automático) --><section id="clientes" class="py-16 md:py-24 bg-white border-t border-gray-100">
+     <!-- CLIENTES - CAROUSEL -->
+     <section id="clientes" class="py-16 md:py-24 bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="font-display text-3xl md:text-4xl font-bold text-bordo mb-12 text-center">Nossas Clientes e Parcerias</h2>
             
@@ -372,7 +379,7 @@
         </div>
     </section>  
 
-    <!-- Seção CTA Final - Bloco de Contato -->
+    <!-- CONTATO - Final CTA Section -->
     <section id="contato" class="py-20 md:py-32 bg-bordo text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">Pronta para o Próximo Nível?</h2>
@@ -387,25 +394,26 @@
         </div>
     </section>
 
-    <!-- Footer Elegante -->
     <footer class="bg-gray-900 text-creme py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
-                <!-- Coluna 1: Logo e Descrição -->
+                <!-- Column 1: Logo and Description -->
                 <div>
                     <a href="#" class="text-3xl font-display font-bold text-dourado tracking-wider">Beher<span class="text-creme">.</span></a>
                     <p class="text-sm mt-2 text-gray-400">Acelerando negócios femininos com excelência e visão.</p>
                 </div>
-                <!-- Coluna 2: Links Rápidos -->
+                <!-- Column 2: Quick Links -->
                 <div>
                     <h5 class="text-white font-semibold mb-3 uppercase text-sm">Navegação</h5>
                     <ul class="space-y-2 text-gray-400 text-sm">
                         <li><a href="#metodologia" class="hover:text-dourado transition">Metodologia</a></li>
                         <li><a href="#servicos" class="hover:text-dourado transition">Serviços</a></li>
+                        <li><a href="#pacotes" class="hover:text-dourado transition">Pacotes</a></li>
                         <li><a href="#sobre" class="hover:text-dourado transition">Sobre Nós</a></li>
+                        <li><a href="#contato" class="hover:text-dourado transition">Contato</a></li>
                     </ul>
                 </div>
-                <!-- Coluna 3: Ajuda e Contato -->
+                <!-- Column 3: Help & Contact -->
                 <div>
                     <h5 class="text-white font-semibold mb-3 uppercase text-sm">Suporte</h5>
                     <ul class="space-y-2 text-gray-400 text-sm">
@@ -414,16 +422,13 @@
                         <li><a href="mailto:contato@beher.com.br" class="hover:text-dourado transition">E-mail</a></li>
                     </ul>
                 </div>
-                <!-- Coluna 4: Redes Sociais -->
+                <!-- Column 4: Social Media -->
                 <div>
                     <h5 class="text-white font-semibold mb-3 uppercase text-sm">Conecte-se</h5>
-                    <!-- O elemento pai 'text-gray-400' foi removido porque PNGs usam suas cores nativas. -->
                     <div class="flex space-x-4">
-                        <!-- Logo Instagram (PNG) -->
                         <a href="#" class="hover:opacity-75 transition duration-300" aria-label="Instagram">
                             <img src="images/logos/instagram.png" alt="Logo Instagram" class="w-6 h-6 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/24x24/343a40/ffffff?text=IG';" />
                         </a>
-                        <!-- Logo LinkedIn (PNG) -->
                         <a href="#" class="hover:opacity-75 transition duration-300" aria-label="LinkedIn">
                             <img src="images/logos/linkedin.png" alt="Logo LinkedIn" class="w-6 h-6 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/24x24/343a40/ffffff?text=LI';" />
                         </a>
@@ -431,7 +436,6 @@
                 </div>
             </div>
 
-            <!-- Direitos Autorais -->
             <div class="text-center text-gray-500 text-sm">
                 &copy; 2025 Beher. Todos os direitos reservados.
             </div>
