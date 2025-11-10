@@ -2,10 +2,10 @@ tailwind.config = {
     theme: {
         extend: {
             colors: {
-                'bordo': '#7d0a28', 
-                'bordo-light': '#a84c68', 
-                'dourado': '#d4af37', 
-                'creme': '#f5f5f5',
+                'vinho': '#67061d', 
+                'vinho-light': '#f294aa', 
+                'laranja': '#c73e04', 
+                'bege': '#ffecce',
             },
             boxShadow: {
                 'premium': '0 10px 30px rgba(125, 10, 40, 0.1), 0 4px 6px rgba(125, 10, 40, 0.05)',
