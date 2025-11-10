@@ -54,3 +54,19 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'Escape') closeMenu();
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const whatsappNumber = "5522981478996";
+  const message = "Olá! Eu adoraria saber mais sobre os serviços disponíveis.";
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  // Seleciona todos os links com a classe .whatsapp-link
+  const whatsappLinks = document.querySelectorAll(".whatsapp-link");
+
+  // Aplica o href a todos eles
+  whatsappLinks.forEach(link => {
+    link.href = whatsappURL;
+  });
+});
+
+
