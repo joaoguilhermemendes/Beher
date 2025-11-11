@@ -6,6 +6,7 @@ tailwind.config = {
                 'vinho-light': '#f294aa', 
                 'laranja': '#c73e04', 
                 'bege': '#ffecce',
+                'bege-light': '#fff5e6',
             },
             boxShadow: {
                 'premium': '0 10px 30px rgba(125, 10, 40, 0.1), 0 4px 6px rgba(125, 10, 40, 0.05)',
