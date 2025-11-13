@@ -124,7 +124,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     
                     <!-- (CARD 01) -->
-                    <div class="lg:col-span-1 bg-vinho-texture text-white p-10 rounded-2xl shadow-premium flex flex-col justify-center">
+                    <div class="lg:col-span-1 bg-[url('./images/cards/metodologia.jpeg')] bg-center bg-cover bg-no-repeat text-white p-10 rounded-2xl shadow-premium flex flex-col justify-center">
                         <span class="text-laranja text-6xl font-display mb-4">01.</span>
                         <h3 class="font-display text-3xl font-bold mb-4">Mapeamento e Clareza</h3>
                         <p class="text-lg opacity-90">Análise profunda do seu negócio e do mercado para definir a rota mais lucrativa. O ponto de partida para o seu sucesso.</p>
@@ -165,7 +165,7 @@
     </section>
 
     <!-- SERVIÇOS -->
-    <section id="servicos" class="py-10 md:py-16 relative bg-[url('./images/background/red-txt.avif')] bg-repeat bg-cover">
+    <section id="servicos" class="py-10 md:py-16 relative bg-[url('./images/background/servicos.avif')] bg-repeat bg-cover">
 
         <!-- Dark & Grain Overlay -->
         <div class="absolute inset-0 bg-black/60 mix-blend-multiply z-0"></div>
@@ -223,7 +223,90 @@
         </div>
         
     </div>
-</section>
+    </section>
+
+    <!-- SOLUCOES -->
+    <section id="solucoes" class="py-16 md:py-28 bg-bege-light font-body">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+            <div class="md:grid md:grid-cols-2 gap-12 lg:gap-16 items-stretch min-h-[600px]"> 
+                
+                <div class="relative bg-black rounded-3xl shadow-2xl overflow-hidden mb-10 md:mb-0 flex flex-col h-full">
+                    
+                    
+                    <div class="absolute inset-0 bg-[url('./images/cards/solutions.avif')] bg-center bg-cover bg-no-repeat"></div>
+                        <!-- Dark & Grain Overlay -->
+                        <div class="absolute inset-0 bg-black/30 mix-blend-multiply z-0"></div>
+                        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] opacity-20 mix-blend-overlay z-0"></div>
+
+                        <div class="relative p-8 sm:p-12 lg:p-14 text-white flex-grow"> 
+                            <h2 class="text-4xl text-bege lg:text-5xl font-extrabold mb-5 leading-tight font-display">
+                                Nossas soluções impulsionam negócios que:
+                            </h2>
+                            
+                            <ul class="space-y-3 text-lg lg:text-xl font-medium list-disc pl-5">
+                                <li><span class="font-bold">Buscam aumento de visibilidade</span> e posicionamento de marca;</li>
+                                <li><span class="font-bold">Almejam expansão</span> e alcance em novos mercados;</li>
+                                <li><span class="font-bold">Não conseguem escalar</span> seus resultados de vendas pelo digital;</li>
+                                <li><span class="font-bold">Não conseguem aquisição</span> de novos clientes em diferentes canais;</li>
+                                <li><span class="font-bold">Possuem dificuldade de crescimento</span> e engajamento do perfil do Instagram;</li>
+                            </ul>
+                        </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-100 h-full" id="form-secao-solucoes"> 
+                    
+                    <form id="lead-form" class="space-y-4 flex flex-col h-full">
+                        <h3 class="text-4xl font-bold text-center text-laranja mb-6 font-body">
+                            Transforme seu Negócio
+                        </h3>
+                        
+                        <div>
+                            <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome <span class="text-laranja">*</span></label>
+                            <input type="text" id="nome" name="nome" required class="mt-1 block w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-laranja focus:border-laranja transition duration-150">
+                        </div>
+
+                        <div>
+                            <label for="telefone" class="block text-sm font-medium text-gray-700 mb-1">Telefone <span class="text-laranja">*</span></label>
+                            <input type="tel" id="telefone" name="telefone"  pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$" required class="mt-1 block w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-laranja focus:border-laranja transition duration-150">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email <span class="text-laranja">*</span></label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-laranja focus:border-laranja transition duration-150">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Cidade <span class="text-laranja">*</span></label>
+                                <input type="text" id="cidade" name="cidade" required class="mt-1 block w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-laranja focus:border-laranja transition duration-150">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Qual o seu Instagram? <span class="text-laranja">*</span></label>
+                                <input type="text" id="instagram" name="instagram" placeholder="@seuinstagram" required class="mt-1 block w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-laranja focus:border-laranja transition duration-150">
+                            </div>
+                        </div>
+
+                        <div> 
+                            <label for="momento" class="block text-sm font-medium text-gray-700 mb-1">Conte-nos sobre seu negócio.</label>
+                            <textarea id="momento" name="momento" rows="2" class="mt-1 block w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-laranja focus:border-laranja transition duration-150"></textarea> 
+                        </div>
+
+                        <button type="submit" class="justify-center mt-8 inline-flex items-center px-8 py-2 border-2 border-laranja text-lg text-white bg-laranja font-semibold rounded-lg hover:bg-white hover:text-vinho transition duration-300 shadow-md">
+                            Quero Minha Call Diagnóstica <span class="ml-2">&rarr;</span>
+                        </button>
+                    </form>
+
+                    <div id="popup" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
+                        <div class="bg-white rounded-2xl p-8 shadow-2xl text-center w-11/12 sm:w-96">
+                            <h3 id="popupTitle" class="text-xl font-bold text-laranja mb-2">Mensagem enviada!</h3>
+                            <p id="popupMessage" class="text-gray-600">Em breve entraremos em contato com você.</p>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </section>
 
     <!-- PACOTES -->
     <section id="pacotes" class="py-20 md:py-32 bg-white">
@@ -571,6 +654,7 @@
 
     </section>
 
+    <!-- FOOTER -->
     <footer class="bg-gray-900 text-bege py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
