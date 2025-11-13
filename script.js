@@ -67,3 +67,27 @@ document.addEventListener("DOMContentLoaded", () => {
     link.href = whatsappURL;
   });
 });
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxJF8FxtHqxMnO7_R1Y7fQLCKR8QZ1YeXbUVVmVmGWIkemXxdPCLVn5NUC6C1ujY_-MoA/exec';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const scriptURL = 'https://script.google.com/macros/s/SEU_SCRIPT_ID/exec';
+  const form = document.getElementById('lead-form');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    fetch(scriptURL, { method: 'POST', body: formData })
+      .then(response => {
+        if (response.ok) {
+          alert('✅ Formulário enviado com sucesso!');
+          form.reset();
+        } else {
+          alert('❌ Erro ao enviar o formulário. Tente novamente.');
+        }
+      })
+      .catch(error => alert('⚠️ Erro de conexão: ' + error.message));
+  });
+});
+
