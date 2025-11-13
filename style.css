@@ -6,23 +6,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Background texture */
-.bg-vinho-texture {
-    background-image: url(images/background/red-carpet-bg.jpeg);
-    background-size: cover; 
-    background-position: center;
-    background-repeat: repeat;
-    background-color: #7d0a28; /* Fallback color */
-}
-
-.bg-dark-blue-texture {
-    background-image: url(images/background/dark-blue-carpet-bg.jpeg);
-    background-size: cover; 
-    background-position: center;
-    background-repeat: repeat;
-    background-color: #222021; /* Fallback color */
-}
-
 /* HEADER */
 .header-logo {
     height: 82px; 
@@ -37,12 +20,12 @@
 }
 .carousel-track {
     display: flex;
-    animation: scroll-left 30s linear infinite; /* Ajuste a duração conforme necessário */
+    animation: scroll-left 30s linear infinite; 
 }
 .carousel-item {
-    flex: 0 0 auto; /* Não permite que os itens cresçam ou encolham */
-    width: 200px; /* Largura fixa para cada logo */
-    margin-right: 2rem; /* Espaçamento entre os logos */
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 2rem;
 }
 .carousel-item img {
     max-width: 100%;
@@ -56,16 +39,16 @@
 
 @keyframes scroll-left {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-200px * 8 - 2rem * 8)); } /* (Largura do item * número de itens) + (margin-right * número de itens) */
+    100% { transform: translateX(calc(-200px * 8 - 2rem * 8)); } 
 }
-/* Para telas menores, você pode querer ajustar o número de itens visíveis ou a largura */
+
 @media (max-width: 768px) {
     .carousel-track {
-        animation: scroll-left-sm 20s linear infinite; /* Velocidade diferente para mobile */
+        animation: scroll-left-sm 20s linear infinite;
     }
     @keyframes scroll-left-sm {
         0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-150px * 8 - 1rem * 8)); } /* Ajuste para mobile se a largura do item for diferente */
+        100% { transform: translateX(calc(-150px * 8 - 1rem * 8)); } 
     }
     .carousel-item {
         width: 150px;
