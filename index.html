@@ -3,250 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beher | Aceleradora de Negócios Femininos</title>
+    <title>Beher Business | Aceleradora de Negócios Femininos</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="font-body text-gray-800 bg-creme">
+<body class="font-body text-gray-800 bg-bege">
+
     <!-- HEADER -->
     <header class="relative top-0 z-50 bg-white shadow-lg/50 backdrop-blur-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
-            <!-- Logo -->
             <a href="#">
                 <img src="images/logos/beher-logo.webp" alt="Logo Beher Business" class="header-logo">
             </a>
             
-            <!-- Navegation bar (Desktop) -->
-            <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#metodologia" class="text-gray-700 hover:text-bordo transition">Metodologia</a>
-                <a href="#servicos" class="text-gray-700 hover:text-bordo transition">Serviços</a>
-                <a href="#pacotes" class="text-gray-700 hover:text-bordo transition">Pacotes</a>
-                <a href="#sobre" class="text-gray-700 hover:text-bordo transition">Sobre</a>
-                <a href="#clientes" class="text-gray-700 hover:text-bordo transition">Clientes</a>
+            <nav class="hidden lg:flex space-x-8 items-center">
+                <a href="#metodologia" class="text-gray-700 hover:text-vinho transition">Metodologia</a>
+                <a href="#servicos" class="text-gray-700 hover:text-vinho transition">Serviços</a>
+                <a href="#planos" class="text-gray-700 hover:text-vinho transition">Planos</a>
+                <a href="#comunidade" class="block text-gray-700 py-2 px-3 rounded hover:bg-gray-100">Comunidade</a>
+                <a href="#sobre" class="text-gray-700 hover:text-vinho transition">Sobre</a>
+                <a href="#clientes" class="text-gray-700 hover:text-vinho transition">Clientes</a>
             </nav>
             
-            <!-- CTA Btn -->
-            <a href="#contato" class="hidden md:inline-block bg-bordo text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-bordo-light transition duration-300 shadow-lg">
+            <a target="_blank" 
+                class="whatsapp-link hidden lg:inline-block bg-vinho text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-vinho-light transition duration-300 shadow-lg">
                 FALE CONOSCO
             </a>
             
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-bordo focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" type="button">
-                <!-- Hamburger (open) -->
+            <button id="mobile-menu-button" class="lg:hidden text-vinho focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" type="button">
                 <svg id="mobile-menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
-                <!-- X (close) -->
                 <svg id="mobile-menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
         </div>
 
-        <!-- Menu Dropdown Mobile -->
-        <div id="mobile-menu" class="hidden md:hidden pb-4 absolute left-0 right-0 bg-white shadow-md z-50">
+        <div id="mobile-menu" class="hidden lg:hidden pb-4 absolute left-0 right-0 bg-white shadow-md z-50">
             <nav class="flex flex-col space-y-1 px-4 pt-3">
                 <a href="#metodologia" class="block text-gray-700 py-2 px-3 rounded hover:bg-gray-100">Metodologia</a>
                 <a href="#servicos" class="block text-gray-700 py-2 px-3 rounded hover:bg-gray-100">Serviços</a>
-                <a href="#pacotes" class="block text-gray-700 py-2 px-3 rounded hover:bg-gray-100">Pacotes</a>
+                <a href="#planos" class="block text-gray-700 py-2 px-3 rounded hover:bg-gray-100">Planos</a>
+                <a href="#comunidade" class="block text-gray-700 py-2 px-3 rounded hover:bg-gray-100">Comunidade</a>
                 <a href="#sobre" class="block text-gray-700 py-2 px-3 rounded hover:bg-gray-100">Sobre</a>
                 <a href="#clientes" class="block text-gray-700 py-2 px-3 rounded hover:bg-gray-100">Clientes</a>
-                <a href="#contato" class="block text-bordo font-semibold mt-2 py-2 px-3 rounded hover:bg-bordo/10">Fale conosco</a>
+                <a target="_blank" 
+                    class="whatsapp-link block text-vinho font-semibold mt-2 py-2 px-3 rounded hover:bg-vinho/10">
+                    Fale conosco
+                </a>
             </nav>
         </div>
     </div>
 </header>
 
     <!-- HERO SECTION - INICIO -->
-    <section id="hero" class="relative overflow-hidden pt-16 pb-32 md:pt-24 md:pb-48 bg-white border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-90">
-            
-            <!-- HERO's Main content -->
-            <div class="md:w-1/2 text-center md:text-left">
-                <p class="text-lg text-dourado uppercase tracking-widest mb-3 font-semibold">Acelere Seu Legado</p>
-                <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-tight text-bordo mb-6">
-                    SEJA VISTA POR QUEM <span class="block">REALMENTE IMPORTA</span>
-                </h1>
-                <p class="text-xl text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
-                    Somos a <b>aceleradora de negócios femininos</b> que eleva o crescimento de empreendedoras através de <b>estratégias de marketing, vendas e gestão</b> comprovadas.
-                </p>
-                
-                <!-- HEROS's CTA -->
-                <div class="flex justify-center md:justify-start space-x-4">
-                    <a href="#contato" class="bg-bordo text-white text-lg font-semibold px-8 py-3 rounded-xl hover:bg-bordo-light transition duration-300 shadow-premium transform hover:scale-105">
-                        Agendar reunião gratuita
-                    </a>
-                    <a href="#metodologia" class="border border-bordo text-bordo text-lg font-semibold px-8 py-3 rounded-xl hover:bg-bordo/10 transition duration-300">
-                        Nossa Metodologia
-                    </a>
-                </div>
-            </div>
+    <section id="hero" class="relative overflow-hidden pt-12 pb-20 md:pt-16 md:pb-24 bg-[url('./images/background/hero.jpg')] bg-center bg-cover bg-no-repeat border-b border-gray-200">
 
-            <!-- HEROS's image -->
-            <div class="md:w-2/5 w-full mt-12 md:mt-0">
-                <div class="aspect-h-4 aspect-w-3 relative overflow-hidden rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 ease-in-out">
-                    <img src="images/background/dark-blue-carpet-bg.jpeg" class="w-full h-full object-cover">
-                </div>
-            </div>
+  <!-- Dark & Grain Overlay -->
+  <div class="absolute inset-0 bg-black/60 mix-blend-multiply z-0"></div>
+  <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] opacity-20 mix-blend-overlay z-0"></div>
+  <div class="absolute inset-0 backdrop-blur-[1px] z-0"></div>
 
-        </div>
+  <!-- HERO Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-9">
+    
+    <!-- Main text -->
+    <div class="md:w-1/2 text-center md:text-left text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]">
+      <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+        SEJA VISTA POR QUEM <span class="block text-bege"><h>REALMENTE IMPORTA</h></span>
+      </h1>
+
+      <p class="text-xl mb-8 max-w-lg mx-auto md:mx-0 text-white/90">
+        Somos uma <b>aceleradora de negócios femininos</b>. Elevamos o crescimento de negócios de empresárias através de <b>estratégias de marketing de performance</b>.
+      </p>
+
+      <p class="text-xl mb-8 max-w-lg mx-auto md:mx-0 text-white/90">
+        Fazemos você ser vista pelas <b>pessoas</b> certas no <b>momento</b> certo.
+      </p>
+      
+      <!-- CTA -->
+      <div class="flex justify-center md:justify-start space-x-4">
+        <a target="_blank" class="whatsapp-link bg-vinho text-bege-light text-lg font-semibold px-8 py-3 rounded-xl hover:bg-vinho-light transition duration-300 shadow-premium transform hover:scale-105">
+          Agendar call diagnóstica
+        </a>
+      </div>
+    </div>
+
+    <!-- Lateral Image 
+    <div class="md:w-2/5 w-full mt-12 md:mt-0">
+      <div class="aspect-h-4 aspect-w-3 relative overflow-hidden rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 ease-in-out">
+        <img src="images/background/dark-blue-carpet-bg.jpeg" class="w-full h-full object-cover" alt="Empresária em reunião de negócios">
+      </div>
+    </div>
+    -->
+
+  </div>
     </section>
 
     <!-- METODOLOGIA -->
-    <section id="metodologia" class="py-20 md:py-32 bg-creme">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="font-display text-4xl md:text-5xl font-bold text-bordo mb-4 text-center">Nossa Metodologia Exclusiva</h2>
-            <p class="text-center text-xl text-gray-500 max-w-3xl mx-auto mb-16">
-                Assim como nos melhores estabelecimentos, nosso serviço é dividido em etapas para garantir excelência e resultados previsíveis.
-            </p>
+    <section id="metodologia" class="py-20 md:py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-vinho mb-4 text-center">Nossa metodologia: Marketing de Performance</h2>
+                <p class="text-center text-xl text-gray-500 max-w-3xl mx-auto mb-16">
+                    Assim como nos melhores estabelecimentos, nosso serviço é dividido em etapas para garantir excelência e resultados previsíveis.
+                </p>
 
-            <!-- Grid 1/3 and 2/3 -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                
-                <!-- (CARD 01) -->
-                <div class="lg:col-span-1 bg-bordo-texture text-white p-10 rounded-2xl shadow-premium flex flex-col justify-center">
-                    <span class="text-dourado text-6xl font-display mb-4">01.</span>
-                    <h3 class="font-display text-3xl font-bold mb-4">Mapeamento e Clareza</h3>
-                    <p class="text-lg opacity-90">Análise profunda do seu negócio e do mercado para definir a rota mais lucrativa. O ponto de partida para o seu sucesso.</p>
-                </div>
-
-                <!-- Grid 2/3 - 2 columns -->
-                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Grid 1/3 and 2/3 -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     
-                    <!-- (CARD 02) -->
-                    <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-dourado/70 hover:shadow-xl transition duration-300">
-                        <span class="text-dourado text-4xl font-display mb-3 block">02.</span>
-                        <h4 class="font-display text-2xl font-semibold text-bordo mb-2">Estratégia Customizada</h4>
-                        <p class="text-gray-600">Desenho de um plano de marketing e vendas à prova de falhas, com foco em diferenciação e posicionamento premium.</p>
+                    <!-- (CARD 01) -->
+                    <div class="lg:col-span-1 bg-[url('./images/cards/metodologia.jpeg')] bg-center bg-cover bg-no-repeat text-white p-10 rounded-2xl shadow-premium flex flex-col justify-center">
+                        <span class="text-laranja text-6xl font-display mb-4">01.</span>
+                        <h3 class="font-display text-3xl font-bold mb-4">Mapeamento e Clareza</h3>
+                        <p class="text-lg opacity-90">Análise profunda do seu negócio e do mercado para definir a rota mais lucrativa. O ponto de partida para o seu sucesso.</p>
                     </div>
 
-                    <!-- (CARD 03) -->
-                    <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-bordo/70 hover:shadow-xl transition duration-300">
-                        <span class="text-bordo text-4xl font-display mb-3 block">03.</span>
-                        <h4 class="font-display text-2xl font-semibold text-bordo mb-2">Execução de Alta Performance</h4>
-                        <p class="text-gray-600">Implementação das táticas definidas, com acompanhamento de KPIs e otimização contínua do funil de conversão.</p>
-                    </div>
+                    <!-- Grid 2/3 - 2 columns -->
+                    <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                        
+                        <!-- (CARD 02) -->
+                        <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-laranja/70 hover:shadow-xl transition duration-300">
+                            <span class="text-laranja text-4xl font-display mb-3 block">02.</span>
+                            <h4 class="font-display text-2xl font-semibold text-vinho mb-2">Marketing para atração</h4>
+                            <p class="text-gray-600">Ampliamos os seus canais de aquisição de clientes através do: Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads.</p>
+                        </div>
 
-                    <!-- (CARD 04) -->
-                    <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-dourado/70 hover:shadow-xl transition duration-300">
-                        <span class="text-dourado text-4xl font-display mb-3 block">04.</span>
-                        <h4 class="font-display text-2xl font-semibold text-bordo mb-2">Escala e Retenção de Clientes</h4>
-                        <p class="text-gray-600">Desenvolvimento de processos para multiplicar seus resultados e estratégias de fidelização de clientes de alto valor.</p>
-                    </div>
+                        <!-- (CARD 03) -->
+                        <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-vinho/70 hover:shadow-xl transition duration-300">
+                            <span class="text-vinho text-4xl font-display mb-3 block">03.</span>
+                            <h4 class="font-display text-2xl font-semibold text-vinho mb-2">Vendas para conversão</h4>
+                            <p class="text-gray-600">Integramos o seu marketing ao seu comercial criando uma arquitetura de geração de receita inteligência e mensurável.</p>
+                        </div>
 
-                     <!-- Callout -->
-                    <div class="p-8 rounded-2xl bg-creme/50 border border-dourado/20 flex items-center">
-                         <p class="text-bordo font-semibold italic">"Resultados de 5 estrelas requerem atenção aos detalhes."</p>
+                        <!-- (CARD 04) -->
+                        <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-laranja/70 hover:shadow-xl transition duration-300">
+                            <span class="text-laranja text-4xl font-display mb-3 block">04.</span>
+                            <h4 class="font-display text-2xl font-semibold text-vinho mb-2">Gestão para retenção</h4>
+                            <p class="text-gray-600">Maximizamos a sua eficiência e lucratividade através da implementação de CRM e automações.</p>
+                        </div>
+
+                        <!-- Callout -->
+                        <div class="p-8 rounded-2xl bg-bege/50 border border-laranja/20 flex items-center">
+                            <p class="text-vinho font-semibold italic">"Resultados de 5 estrelas requerem atenção aos detalhes."</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
     </section>
 
     <!-- SERVIÇOS -->
-    <section id="servicos" class="py-20 md:py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="font-display text-4xl md:text-5xl font-bold text-bordo mb-4 text-center">O Acompanhamento Beher Inclui</h2>
-            <p class="text-center text-xl text-gray-500 max-w-3xl mx-auto mb-16">
-                Um time experiente cuidando de cada pilar do seu crescimento.
+    <section id="servicos" class="py-10 md:py-16 relative bg-[url('./images/background/servicos.avif')] bg-repeat bg-cover">
+
+        <!-- Dark & Grain Overlay -->
+        <div class="absolute inset-0 bg-black/60 mix-blend-multiply z-0"></div>
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] opacity-20 mix-blend-overlay z-0"></div>
+            
+        <div class="text-center mb-2 max-w-3xl mx-auto relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-bege mb-4 text-center">Método de Aceleração Digital</h2>
+            <p class="text-center text-xl text-bege-light max-w-4xl mx-auto mb-2">
+                Tecnologia em <b>marketing</b> e <b>vendas</b>
             </p>
+        </div>
 
-            <!-- Grid 3 Columns -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex justify-center w-full max-w-xl mx-auto relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <svg class="w-full h-auto" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                 
-                <!-- (CARD 01) -->
-                <div class="p-10 bg-creme rounded-2xl shadow-premium border-b-4 border-bordo hover:shadow-2xl transition duration-300">
-                    <div class="text-dourado mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
-                        </svg>
-                    </div>
-                    <h4 class="font-display text-2xl font-semibold text-bordo mb-3">Consultoria Estratégica</h4>
-                    <p class="text-gray-600">Sessões individuais de alinhamento e planejamento com especialistas em gestão e finanças. Foco na rentabilidade.</p>
+                <circle cx="200" cy="200" r="160" fill="#FBF8F1"/> 
+                <circle cx="200" cy="200" r="70" fill="#67061d"/> 
+                
+                
+                <line x1="200" y1="250" x2="200" y2="360" stroke="#67061d" stroke-width="1.5"/>
+                <line x1="200" y1="250" x2="200" y2="360" stroke="#67061d" stroke-width="1.5" transform="rotate(72 200 200)"/>
+                <line x1="200" y1="250" x2="200" y2="360" stroke="#67061d" stroke-width="1.5" transform="rotate(144 200 200)"/>
+                <line x1="200" y1="250" x2="200" y2="360" stroke="#67061d" stroke-width="1.5" transform="rotate(216 200 200)"/>
+                <line x1="200" y1="250" x2="200" y2="360" stroke="#67061d" stroke-width="1.5" transform="rotate(288 200 200)"/>
+
+                
+                <g font-family="'Poppins', serif" font-size="10" fill="#590D22" text-anchor="middle">
+                    
+                    <text x="200" y="85">CRM, IA e</text>
+                    <text x="200" y="100">Automações</text>
+                    
+                    <text x="300" y="160">Integração</text>
+                    <text x="305" y="175">Comercial</text>
+
+                    <text x="280" y="275">Ampliação dos</text>
+                    <text x="270" y="290">canais de aquisição</text>
+                    <text x="260" y="305">(Meta Ads/Google)</text>
+                    
+                    <text x="120" y="275">Medição de ROI</text>
+                    <text x="130" y="290">e Análise de</text>
+                    <text x="140" y="305">Conversões</text>
+                    
+                    <text x="90" y="160">Growth hacking</text>
+                    <text x="90" y="175">e análise de</text>
+                    <text x="90" y="190">dados</text>
+                    
+                </g>
+                
+                
+                <text x="200" y="190" font-family="'Noto Serif Display', serif" font-size="16" font-style="italic" font-weight="bold" fill="#FBF8F1" text-anchor="middle" dominant-baseline="middle">Marketing de</text>
+                <text x="200" y="210" font-family="'Noto Serif Display', serif" font-size="16" font-style="italic" font-weight="bold" fill="#ffecce" text-anchor="middle" dominant-baseline="middle">Performance</text>
+
+            </svg>
+        </div>
+        
+    </div>
+    </section>
+
+    <!-- SOLUCOES -->
+    <section id="solucoes" class="py-16 md:py-28 bg-bege-light font-body">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+            <div class="md:grid md:grid-cols-2 gap-12 lg:gap-16 items-stretch min-h-[600px]"> 
+                
+                <div class="relative bg-black rounded-3xl shadow-2xl overflow-hidden mb-10 md:mb-0 flex flex-col h-full">
+                    
+                    
+                    <div class="absolute inset-0 bg-[url('./images/cards/solutions.avif')] bg-center bg-cover bg-no-repeat"></div>
+                        <!-- Dark & Grain Overlay -->
+                        <div class="absolute inset-0 bg-black/30 mix-blend-multiply z-0"></div>
+                        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] opacity-20 mix-blend-overlay z-0"></div>
+
+                        <div class="relative p-8 sm:p-12 lg:p-14 text-white flex-grow"> 
+                            <h2 class="text-4xl text-bege lg:text-5xl font-extrabold mb-5 leading-tight font-display">
+                                Nossas soluções impulsionam negócios que:
+                            </h2>
+                            
+                            <ul class="space-y-3 text-lg lg:text-xl font-medium list-disc pl-5">
+                                <li><span class="font-bold">Buscam aumento de visibilidade</span> e posicionamento de marca;</li>
+                                <li><span class="font-bold">Almejam expansão</span> e alcance em novos mercados;</li>
+                                <li><span class="font-bold">Não conseguem escalar</span> seus resultados de vendas pelo digital;</li>
+                                <li><span class="font-bold">Não conseguem aquisição</span> de novos clientes em diferentes canais;</li>
+                                <li><span class="font-bold">Possuem dificuldade de crescimento</span> e engajamento do perfil do Instagram;</li>
+                            </ul>
+                        </div>
                 </div>
 
-                <!-- (CARD 02) -->
-                <div class="p-10 bg-creme rounded-2xl shadow-premium border-b-4 border-dourado hover:shadow-2xl transition duration-300">
-                    <div class="text-bordo mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="font-display text-2xl font-semibold text-bordo mb-3">Mentoria de Liderança</h4>
-                    <p class="text-gray-600">Desenvolvimento de habilidades de gestão de equipe e comunicação para que você lidere seu negócio com confiança e visão.</p>
-                </div>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-100 h-full" id="form-secao-solucoes"> 
+                    
+                    <form id="lead-form" class="space-y-4 flex flex-col h-full">
+                        <h3 class="text-4xl font-bold text-center text-laranja mb-6 font-body">
+                            Transforme seu Negócio
+                        </h3>
+                        
+                        <div>
+                            <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome <span class="text-laranja">*</span></label>
+                            <input type="text" id="nome" name="nome" required class="mt-1 block w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-laranja focus:border-laranja transition duration-150">
+                        </div>
 
-                <!-- (CARD 03) -->
-                <div class="p-10 bg-creme rounded-2xl shadow-premium border-b-4 border-bordo hover:shadow-2xl transition duration-300">
-                    <div class="text-dourado mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h4 class="font-display text-2xl font-semibold text-bordo mb-3">Performance Digital</h4>
-                    <p class="text-gray-600">Estratégias de tráfego, funis de venda e marketing de conversão para garantir que você alcance seu público-alvo de alto valor.</p>
-                </div>
+                        <div>
+                            <label for="telefone" class="block text-sm font-medium text-gray-700 mb-1">Telefone <span class="text-laranja">*</span></label>
+                            <input type="tel" id="telefone" name="telefone"  pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$" required class="mt-1 block w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-laranja focus:border-laranja transition duration-150">
+                        </div>
 
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email <span class="text-laranja">*</span></label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-laranja focus:border-laranja transition duration-150">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Cidade <span class="text-laranja">*</span></label>
+                                <input type="text" id="cidade" name="cidade" required class="mt-1 block w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-laranja focus:border-laranja transition duration-150">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Qual o seu Instagram? <span class="text-laranja">*</span></label>
+                                <input type="text" id="instagram" name="instagram" placeholder="@seuinstagram" required class="mt-1 block w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-laranja focus:border-laranja transition duration-150">
+                            </div>
+                        </div>
+
+                        <div> 
+                            <label for="momento" class="block text-sm font-medium text-gray-700 mb-1">Conte-nos sobre seu negócio.</label>
+                            <textarea id="momento" name="momento" rows="2" class="mt-1 block w-full border border-gray-300 rounded-lg py-2 px-3 focus:ring-2 focus:ring-laranja focus:border-laranja transition duration-150"></textarea> 
+                        </div>
+
+                        <button type="submit" class="justify-center mt-8 inline-flex items-center px-8 py-2 border-2 border-laranja text-lg text-white bg-laranja font-semibold rounded-lg hover:bg-white hover:text-vinho transition duration-300 shadow-md">
+                            Quero Minha Call Diagnóstica <span class="ml-2">&rarr;</span>
+                        </button>
+                    </form>
+
+                    <div id="popup" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
+                        <div class="bg-white rounded-2xl p-8 shadow-2xl text-center w-11/12 sm:w-96">
+                            <h3 id="popupTitle" class="text-xl font-bold text-laranja mb-2">Mensagem enviada!</h3>
+                            <p id="popupMessage" class="text-gray-600">Em breve entraremos em contato com você.</p>
+                        </div>
+                    </div>
+                </div>    
             </div>
         </div>
     </section>
 
-    <!-- PACOTES -->
-    <section id="pacotes" class="py-20 md:py-32 bg-white">
+    <!-- PLANOS -->
+    <section id="planos" class="py-20 md:py-32 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="font-display text-4xl md:text-5xl font-bold text-bordo mb-4 text-center">Nossos Pacotes de Aceleração Premium</h2>
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-vinho mb-4 text-center">Nossos Planos</h2>
             <p class="text-center text-xl text-gray-500 max-w-4xl mx-auto mb-16">
-                Escolha o nível de acompanhamento ideal para o momento do seu negócio. Cada pacote é um compromisso com a sua visibilidade e lucro.
+                Do tráfego ao comercial, da conversão à retenção.
+                Um acompanhamento completo pensado para acelerar o seu crescimento.
+                Um ecossistema de vendas para sua empresa.
             </p>
 
-            <!-- 4 column grid - PACOTES -->
+            <!-- 4 column grid - PLANOS -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 
                 <!-- Card 1: Be Ready -->
-                <div class="p-6 bg-creme rounded-2xl shadow-premium border-t-8 border-bordo hover:shadow-2xl transition duration-300 flex flex-col">
-                    <h4 class="font-display text-3xl font-bold text-bordo mb-3">Be Ready</h4>
+                <div class="p-6 bg-bege-light rounded-2xl shadow-premium border-t-8 border-vinho hover:shadow-2xl transition duration-300 flex flex-col">
+                    <h4 class="font-display text-3xl font-bold text-vinho mb-3"><span style="font-weight: 300;">Be</span> Ready</h4>
                     <p class="text-gray-600 mb-4 font-semibold italic">Destrave o seu Instagram e esteja pronta para vender.</p>
                     
-                    <h5 class="text-sm font-bold text-dourado uppercase mb-2">Inclusões Chave:</h5>
+                    <h5 class="text-sm font-bold text-laranja uppercase mb-2">VOCÊ RECEBE:</h5>
                     <ul class="inclusions-list flex-grow">
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Diagnóstico de Perfil (Bio, Destaques)</span>
+                            <span>Diagnóstico do perfil atual (bio, destaques e feed)</span>
                         </li>
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Construção de Linha Editorial</span>
+                            <span>Identificação de gargalos que estão travando a sua produção de conteúdo</span>
                         </li>
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>2 Encontros (Pré e Pós-Projeto)</span>
+                            <span>Construção de linha editorial</span>
                         </li>
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>15 dias de Suporte WhatsApp</span>
+                            <span>Construção de narrativas de marca alinhado ao seu funil de vendas</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>2 encontros: pré e pós projeto</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>15 dias de suporte pelo WhatsApp</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>CTA Agendar diagnóstico gratuito</span>
                         </li>
                     </ul>
-                    <a href="#contato" class="mt-4 text-center bg-bordo text-white py-2 rounded-full text-sm font-semibold hover:bg-bordo-light transition duration-300">Escolher</a>
+                    <a target="_blank" class="whatsapp-link mt-4 text-center bg-vinho text-white py-2 rounded-full text-sm font-semibold hover:bg-vinho-light transition duration-300">Escolher</a>
                 </div>
 
                 <!-- Card 2: Be Seen -->
-                <div class="p-6 bg-white rounded-2xl shadow-premium border-t-8 border-dourado hover:shadow-2xl transition duration-300 flex flex-col">
-                    <h4 class="font-display text-3xl font-bold text-bordo mb-3">Be Seen</h4>
-                    <p class="text-gray-600 mb-4 font-semibold italic">Conquiste clientes e seja vista através do tráfego pago.</p>
+                <div class="p-6 bg-white rounded-2xl shadow-premium border-t-8 border-laranja hover:shadow-2xl transition duration-300 flex flex-col">
+                    <h4 class="font-display text-3xl font-bold text-vinho mb-3"><span style="font-weight: 300;">Be</span> Seen</h4>
+                    <p class="text-gray-600 mb-4 font-semibold italic">Fazemos você conquistar clientes e ser vista através do tráfego pago.</p>
                     
-                    <h5 class="text-sm font-bold text-dourado uppercase mb-2">Inclusões Chave:</h5>
+                    <h5 class="text-sm font-bold text-laranja uppercase mb-2">VOCÊ RECEBE:</h5>
                     <ul class="inclusions-list flex-grow">
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Gestão de Mídia Paga (Meta Ads / Google Ads)</span>
+                            <span>Gestão de mídia paga: Meta Ads ou Google Ads</span>
                         </li>
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Construção de Funil de Vendas</span>
+                            <span>Plano estratégico de mídia paga</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Construção de funil de vendas</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Mapeamento de persona e segmentações</span>
                         </li>
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
@@ -254,186 +385,420 @@
                         </li>
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Relatórios Mensais e Feedbacks</span>
+                            <span>Baú de criativos (assessoria na criação de criativos de alta performance)</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Análise de métricas e dados</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Feedbacks semanais</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Relatórios Mensais</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>CTA Agendar diagnóstico gratuito</span>
                         </li>
                     </ul>
-                    <a href="#contato" class="mt-4 text-center bg-dourado text-bordo py-2 rounded-full text-sm font-semibold hover:bg-dourado/80 transition duration-300">Escolher</a>
+                    <a target="_blank" class="whatsapp-link mt-4 text-center bg-laranja text-white py-2 rounded-full text-sm font-semibold hover:bg-laranja/80 transition duration-300">Escolher</a>
                 </div>
 
                 <!-- Card 3: Be Ahead -->
-                <div class="p-6 bg-creme rounded-2xl shadow-premium border-t-8 border-bordo hover:shadow-2xl transition duration-300 flex flex-col">
-                    <h4 class="font-display text-3xl font-bold text-bordo mb-3">Be Ahead</h4>
-                    <p class="text-gray-600 mb-4 font-semibold italic">Seu negócio à frente: do tráfego à assessoria do comercial.</p>
+                <div class="p-6 bg-bege-light rounded-2xl shadow-premium border-t-8 border-vinho hover:shadow-2xl transition duration-300 flex flex-col">
+                    <h4 class="font-display text-3xl font-bold text-vinho mb-3"><span style="font-weight: 300;">Be</span> Ahead</h4>
+                    <p class="text-gray-600 mb-4 font-semibold italic">Fazemos o seu negócio estar à frente. Assessoria do tráfego ao comercial</p>
                     
-                    <h5 class="text-sm font-bold text-dourado uppercase mb-2">Inclusões Chave:</h5>
+                    <h5 class="text-sm font-bold text-laranja uppercase mb-2">VOCÊ RECEBE:</h5>
                     <ul class="inclusions-list flex-grow">
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Gestão de Mídia Paga (Pacote Be Seen incluído)</span>
+                            <span>Gestão de mídia paga: Meta Ads ou/e Google Ads + tudo do pacote Be Seen</span>
                         </li>
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Construção da sua PUV (Proposta de Valor)</span>
+                            <span>Construção da sua PUV (proposta única de valor) e carta de vendas</span>
                         </li>
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Implementação de CRM e Scripts de Vendas</span>
+                            <span>Estruturação da jornada de compra</span>
                         </li>
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Implementação de Bot / IA - WhatsApp</span>
+                            <span>Construção da sua esteira de produtos</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Scripts de vendas</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Implementação de CRM</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Implementação Bot/IA - Whatsapp</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>CTA Agendar diagnóstico gratuito</span>
                         </li>
                     </ul>
-                    <a href="#contato" class="mt-4 text-center bg-bordo text-white py-2 rounded-full text-sm font-semibold hover:bg-bordo-light transition duration-300">Escolher</a>
+                    <a target="_blank" class="whatsapp-link mt-4 text-center bg-vinho text-white py-2 rounded-full text-sm font-semibold hover:bg-vinho-light transition duration-300">Escolher</a>
                 </div>
 
                 <!-- Card 4: Beyond -->
-                <div class="p-6 bg-white rounded-2xl shadow-premium border-t-8 border-dourado hover:shadow-2xl transition duration-300 flex flex-col">
-                    <h4 class="font-display text-3xl font-bold text-bordo mb-3">Beyond</h4>
-                    <p class="text-gray-600 mb-4 font-semibold italic">Consultoria que une marketing, gestão e inteligência de negócios.</p>
+                <div class="p-6 bg-white rounded-2xl shadow-premium border-t-8 border-laranja hover:shadow-2xl transition duration-300 flex flex-col">
+                    <h4 class="font-display text-3xl font-bold text-vinho mb-3">Beyond</h4>
+                    <p class="text-gray-600 mb-4 font-semibold italic">Consultoria que uni marketing e inteligência de negócios.</p>
                     
-                    <h5 class="text-sm font-bold text-dourado uppercase mb-2">Inclusões Chave:</h5>
+                    <h5 class="text-sm font-bold text-laranja uppercase mb-2">VOCÊ RECEBE:</h5>
                     <ul class="inclusions-list flex-grow">
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Estudo e Análise de Mercado / Concorrência</span>
+                            <span>Estudo e análise de mercado</span>
                         </li>
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Mapeamento de Persona e Segmentações</span>
+                            <span>Análise de concorrência e benchmarking</span>
                         </li>
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Ações Comerciais e Construção de OKR's</span>
+                            <span>Mapeamento de persona e segmentações</span>
                         </li>
                         <li>
                             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Construção da sua PUV e Carta de Vendas</span>
+                            <span>Construção de funil de vendas</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Construção de funil de vendas</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Planejamento editorial</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Construção de narrativas de marca</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Construção de identidade comunicativa digital</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Análise SWOT</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Ações comerciais e construção de OKR'S</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Construção da sua PUV (proposta única de valor) e Carta de vendas</span>
+                        </li>
+                        <li>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>CTA Agendar diagnóstico gratuito</span>
                         </li>
                     </ul>
-                    <a href="#contato" class="mt-4 text-center bg-dourado text-bordo py-2 rounded-full text-sm font-semibold hover:bg-dourado/80 transition duration-300">Escolher</a>
+                    <a target="_blank" class="whatsapp-link mt-4 text-center bg-laranja text-white py-2 rounded-full text-sm font-semibold hover:bg-laranja/80 transition duration-300">Escolher</a>
                 </div>
 
             </div>
         </div>
     </section>
-    
-    <!-- SOBRE NOS-->
-    <!-- Assimetric Layout Section -->
-    <section id="sobre" class="py-20 md:py-32 bg-creme">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+    <!-- COMUNIDADE -->
+    <section id="comunidade" class="py-16 md:py-28 bg-white font-body">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-vinho mb-8">
+                <span style="font-weight: 300;">Be</span> Together
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
+                Comunidade de empresárias que conquistam resultados reais.
+                Uma série de iniciativas pensada para elevar o seu crescimento:
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="relative bg-black rounded-2xl shadow-xl overflow-hidden group transform hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-[url('./images/cards/beImpact.avif')] bg-center bg-cover bg-no-repeat"></div>
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all duration-300"></div> 
                 
-                <!-- Image (8/12) -->
-                <div class="lg:col-span-7 relative">
-                    <img src="images/background/dark-blue-carpet-bg-.jpeg" class="w-full h-auto rounded-xl shadow-2xl">
-                    <!-- Detalhe decorativo -->
-                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-dourado/20 rounded-full hidden md:block"></div>
+                <div class="relative p-8 text-white h-full flex flex-col justify-between">
+                    <div>
+                        <span class="text-sm font-semibold text-laranja uppercase tracking-widest mb-2 block">01</span>
+                        <h3 class="text-3xl font-bold font-display mb-3">Be Impact</h3>
+                        <p class="text-lg">Imersões online lideradas por empresárias que ensinam o que vivem.</p>
+                    </div>
+                    <a href="#" class="self-end mt-8 p-3 rounded-full bg-laranja hover:bg-white hover:text-laranja transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
                 </div>
+            </div>
+
+            <div class="relative bg-black rounded-2xl shadow-xl overflow-hidden group transform hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-[url('./images/cards/beBetter.avif')] bg-center bg-cover bg-no-repeat"></div>
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all duration-300"></div> 
                 
-                <!-- Text (4/12) -->
-                <div class="lg:col-span-5 lg:order-first">
-                    <h2 class="font-display text-4xl md:text-5xl font-bold text-bordo mb-6">Nossa Filosofia</h2>
-                    <p class="text-xl text-gray-600 mb-6 border-l-4 border-dourado pl-4 italic">
-                        "O crescimento sustentável de um negócio se constrói com a mesma precisão e arte de uma culinária de alta gastronomia: ingredientes de qualidade (estratégia) e execução impecável (performance)."
-                    </p>
-                    <p class="text-lg text-gray-700 mb-4">
-                        A Beher nasceu da necessidade de um acompanhamento realmente completo e personalizado para empreendedoras que buscam não apenas faturar mais, mas construir um legado.
-                    </p>
-                    <p class="text-lg text-gray-700">
-                        Nossas equipe combina experiência e eficiência, entregando uma visão 360º sobre marketing, vendas e gestão. Somos especialistas em transformar potencial em lucro real.
-                    </p>
-                    <a href="#contato" class="mt-6 inline-block text-bordo font-semibold hover:text-dourado transition duration-300">
-                        Entre em contato &rarr;
+                <div class="relative p-8 text-white h-full flex flex-col justify-between">
+                    <div>
+                        <span class="text-sm font-semibold text-laranja uppercase tracking-widest mb-2 block">02</span>
+                        <h3 class="text-3xl font-bold font-display mb-3">Be Better</h3>
+                        <p class="text-lg">Imersões presenciais focadas no equilíbrio entre corpo, mente e negócios.</p>
+                    </div>
+                    <a href="#" class="self-end mt-8 p-3 rounded-full bg-laranja hover:bg-white hover:text-laranja transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative bg-black rounded-2xl shadow-xl overflow-hidden group transform hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-[url('./images/cards/beConnect.avif')] bg-center bg-cover bg-no-repeat"></div>
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all duration-300"></div> 
+                
+                <div class="relative p-8 text-white h-full flex flex-col justify-between">
+                    <div>
+                        <span class="text-sm font-semibold text-laranja uppercase tracking-widest mb-2 block">03</span>
+                        <h3 class="text-3xl font-bold font-display mb-3">Be Connect</h3>
+                        <p class="text-lg">Programas de indicação, conexão e networking.</p>
+                    </div>
+                    <a href="#" class="self-end mt-8 p-3 rounded-full bg-laranja hover:bg-white hover:text-laranja transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative bg-black rounded-2xl shadow-xl overflow-hidden group transform hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-[url('./images/cards/beBook.avif')] bg-center bg-cover bg-no-repeat"></div>
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all duration-300"></div> 
+                
+                <div class="relative p-8 text-white h-full flex flex-col justify-between">
+                    <div>
+                        <span class="text-sm font-semibold text-laranja uppercase tracking-widest mb-2 block">04</span>
+                        <h3 class="text-3xl font-bold font-display mb-3">Clube de Hobbies</h3>
+                        <p class="text-lg">Clube do Livro (Bebook Club) e outros.</p>
+                    </div>
+                    <a href="#" class="self-end mt-8 p-3 rounded-full bg-laranja hover:bg-white hover:text-laranja transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative bg-black rounded-2xl shadow-xl overflow-hidden group transform hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-[url('./images/cards/elaTalks.avif')] bg-center bg-cover bg-no-repeat"></div>
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all duration-300"></div> 
+                
+                <div class="relative p-8 text-white h-full flex flex-col justify-between">
+                    <div>
+                        <span class="text-sm font-semibold text-laranja uppercase tracking-widest mb-2 block">05</span>
+                        <h3 class="text-3xl font-bold font-display mb-3">Ela Talks</h3>
+                        <p class="text-lg">Série de conteúdos onde contamos histórias reais de empreendedoras de sucesso.</p>
+                    </div>
+                    <a href="#" class="self-end mt-8 p-3 rounded-full bg-laranja hover:bg-white hover:text-laranja transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-16 md:mt-24">
+            <a href="#" class="whatsapp-link items-center px-10 py-4 border border-transparent text-xl font-semibold rounded-full shadow-lg text-white bg-laranja hover:bg-vinho focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-laranja transition duration-300 ease-in-out">
+                Fazer parte da comunidade gratuitamente
+            </a>
+        </div>
+
+    </div>
+    </section>
+    
+    <!-- SOBRE NOS -->
+    <section id="sobre" class="py-20 md:py-32 bg-gray-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="lg:order-1">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-vinho mb-8">Sobre Nós</h2>
+                    
+                    <blockquote class="text-xl text-gray-700 italic border-l-4 border-laranja pl-4 mb-8">
+                        "Um time de mulheres especialistas em marketing, vendas e comunicação."
+                    </blockquote>
+
+                    <div class="space-y-5 text-lg text-gray-700">
+                        <p>
+                            A Beher nasceu da necessidade de um <b>acompanhamento completo e personalizado</b> para empreendedoras que buscam não apenas faturar mais, mas construir um legado.
+                        </p>
+                
+                        <div class="mt-8 pt-4 border-t border-gray-300">
+                        <br>
+                        <p class="text-3xl font-bold text-vinho mb-1">Alane Torres</p>
+                        <p class="text-sm font-semibold uppercase tracking-wider text-gray-600">Sócia e Gestora de Performance</p>
+                        </div>
+                        <br>
+                        <p>
+                            Uma profissional de marketing que entende de números, gestão e estratégia percebeu os desafios das empreendedoras e a ausência de profissionais que realmente as entendem.
+                        </p>
+                        <p>
+                            Decidiu criar a Be. como manifesto de seu propósito: <b>ajudar negócios de empresárias</b>.
+                        </p>
+                        <p>
+                            Junto com um time de mulheres especialistas, busca elevar o empreendedorismo feminino: um trabalho social, ético e político.
+                        </p>
+                    </div>
+
+                    <a target="_blank" class="whatsapp-link mt-8 inline-flex items-center px-8 py-2 border-2 border-laranja text-lg text-vinho font-semibold rounded-lg hover:bg-laranja hover:text-white transition duration-300 shadow-md">
+                        Entre em contato <span class="ml-2">&rarr;</span>
                     </a>
                 </div>
 
+                <div class="lg:order-2">
+                    
+                    <div class="relative">
+                        <div class="relative w-full h-auto rounded-xl overflow-hidden shadow-2xl">
+                            <img src="images/cards/sobre_nos.jpg" class="w-full h-full object-cover rounded-xl" style="min-height: 400px;">
+                            <div class="absolute inset-0 bg-vinho/10 mix-blend-multiply"></div>
+                        </div>
+
+                        <div class="mt-8 lg:mt-0 lg:absolute lg:bottom-[-4rem] lg:w-full flex justify-center lg:justify-center">
+                            
+                            <div class="w-full max-w-lg grid grid-cols-2 gap-4"> 
+                                
+                                <div class="p-6 md:p-8 rounded-xl bg-white shadow-xl flex flex-col text-center border-t-4 border-laranja transform hover:scale-[1.02] transition duration-300">
+                                    <span class="text-laranja text-4xl md:text-5xl font-extrabold mb-1 block">+100k</span>
+                                    <p class="font-sans text-base font-medium text-gray-600">Investidos em Anúncios</p>
+                                </div>
+
+                                <div class="p-6 md:p-8 rounded-xl bg-white shadow-xl flex flex-col text-center border-t-4 border-laranja transform hover:scale-[1.02] transition duration-300">
+                                    <span class="text-laranja text-4xl md:text-5xl font-extrabold mb-1 block">+50</span>
+                                    <p class="font-sans text-base font-medium text-gray-600">Contas Gerenciadas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 lg:mt-24">
+                        <ul class="mt-8 space-y-3 text-base text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 mr-2 mt-1 text-laranja flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><b>Formação Sólida:</b> Graduada em marketing (Unilasalle) e pós-graduanda em Gestão Empresarial (Anhembi Morumbi) e MBA em Projetos (PUC-RS).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 mr-2 mt-1 text-laranja flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><b>Experiência Comprovada:</b> Mais de 5 anos em agências, atuando como gestora de tráfego, projetos e Líder de times de marketing.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 mr-2 mt-1 text-laranja flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><b>Visão Estratégica:</b> Formação executiva na USP e escritora de artigo acadêmico sobre o impacto social do empreendedorismo feminino.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-     <!-- CLIENTES - CAROUSEL -->
+    <!-- CLIENTES - CAROUSEL -->
      <section id="clientes" class="py-16 md:py-24 bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="font-display text-3xl md:text-4xl font-bold text-bordo mb-12 text-center">Nossas Clientes e Parcerias</h2>
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-vinho mb-12 text-center">Empreendedoras que já impactamos</h2>
             
             <div class="carousel-container">
                 <div class="carousel-track">
-                    <!-- Duplique os itens para um loop suave -->
-                    <div class="carousel-item"><img src="images/clients/crypturon-dark.webp" alt="Logo Cliente 1"></div>
-                    <div class="carousel-item"><img src="images/clients/hexagontalxio-dark.webp" alt="Logo Cliente 2"></div>
-                    <div class="carousel-item"><img src="images/clients/lyraxionics-dark.webp" alt="Logo Cliente 3"></div>
-                    <div class="carousel-item"><img src="images/clients/reviluxify-dark.webp" alt="Logo Cliente 4"></div>
-                    <div class="carousel-item"><img src="images/clients/spectroxium-dark.webp" alt="Logo Cliente 5"></div>
-                    <div class="carousel-item"><img src="images/clients/zyntellix-dark.webp" alt="Logo Cliente 6"></div>
-                    <div class="carousel-item"><img src="images/clients/crypturon-dark.webp" alt="Logo Cliente 7"></div>
-                    <div class="carousel-item"><img src="images/clients/hexagontalxio-dark.webp" alt="Logo Cliente 8"></div>
+                    <div class="carousel-item"><img src="images/clients/cda.png"></div>
+                    <div class="carousel-item"><img src="images/clients/beiraMar.png"></div>
+                    <div class="carousel-item"><img src="images/clients/cromo.png"></div>
+                    <div class="carousel-item"><img src="images/clients/detoxAlma.png"></div>
+                    <div class="carousel-item"><img src="images/clients/lucyDeccache.png"></div>
+                    <div class="carousel-item"><img src="images/clients/nonnaLina.png"></div>
+                    <div class="carousel-item"><img src="images/clients/ouverney.png"></div>
+                    <div class="carousel-item"><img src="images/clients/rosianeAquino.png"></div>
+                    <div class="carousel-item"><img src="images/clients/solNascente.png"></div>
+                    <div class="carousel-item"><img src="images/clients/thaisPortto.png"></div>
+                    <div class="carousel-item"><img src="images/clients/beiraMarHome.png"></div>
 
-                    <!-- Repita os itens para o efeito de loop infinito -->
-                    <div class="carousel-item"><img src="images/clients/crypturon-dark.webp" alt="Logo Cliente 1"></div>
-                    <div class="carousel-item"><img src="images/clients/hexagontalxio-dark.webp" alt="Logo Cliente 2"></div>
-                    <div class="carousel-item"><img src="images/clients/lyraxionics-dark.webp" alt="Logo Cliente 3"></div>
-                    <div class="carousel-item"><img src="images/clients/reviluxify-dark.webp" alt="Logo Cliente 4"></div>
-                    <div class="carousel-item"><img src="images/clients/spectroxium-dark.webp" alt="Logo Cliente 5"></div>
-                    <div class="carousel-item"><img src="images/clients/zyntellix-dark.webp" alt="Logo Cliente 6"></div>
-                    <div class="carousel-item"><img src="images/clients/crypturon-dark.webp" alt="Logo Cliente 7"></div>
-                    <div class="carousel-item"><img src="images/clients/hexagontalxio-dark.webp" alt="Logo Cliente 8"></div>
+                    <div class="carousel-item"><img src="images/clients/cda.png"></div>
+                    <div class="carousel-item"><img src="images/clients/beiraMar.png"></div>
+                    <div class="carousel-item"><img src="images/clients/cromo.png"></div>
+                    <div class="carousel-item"><img src="images/clients/detoxAlma.png"></div>
+                    <div class="carousel-item"><img src="images/clients/lucyDeccache.png"></div>
+                    <div class="carousel-item"><img src="images/clients/nonnaLina.png"></div>
+                    <div class="carousel-item"><img src="images/clients/ouverney.png"></div>
+                    <div class="carousel-item"><img src="images/clients/rosianeAquino.png"></div>
+                    <div class="carousel-item"><img src="images/clients/solNascente.png"></div>
+                    <div class="carousel-item"><img src="images/clients/thaisPortto.png"></div>
+                    <div class="carousel-item"><img src="images/clients/beiraMarHome.png"></div>
                 </div>
             </div>
         </div>
     </section>  
 
-    <!-- CONTATO - Final CTA Section -->
-    <section id="contato" class="py-20 md:py-32 bg-bordo text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">Pronta para o Próximo Nível?</h2>
-            <p class="text-xl opacity-90 mb-8">
-                Reserve uma conversa gratuita e descubra como a Beher pode acelerar o crescimento do seu negócio de forma estratégica e sustentável.
-            </p>
-            
-            <a href="mailto:contato@beher.com.br" class="inline-block bg-dourado text-bordo text-xl font-bold px-10 py-4 rounded-full hover:bg-white hover:text-bordo transition duration-300 shadow-xl transform hover:scale-105">
-                AGENDAR REUNIÃO AGORA
-            </a>
+    <!-- CONTATO -->
+    <section id="contato" class="relative overflow-hidden pt-12 pb-20 md:pt-16 md:pb-24 bg-[url('./images/background/contact.avif')] bg-center bg-cover bg-no-repeattext-white">
+    
+    <!-- Dark & Grain Overlay -->
+    <div class="absolute inset-0 bg-black/60 mix-blend-multiply z-0"></div>
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] opacity-20 mix-blend-overlay z-0"></div>
 
-        </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-bege">Vamos nos conhecer melhor?</h2>
+        <p class="text-xl opacity-100 mb-8 text-bege-light">
+            Agende a nossa call diagnóstica e descubra como podemos acelerar o crescimento do seu negócio.
+        </p>
+        <br>
+        <h2 class="font-body text-2xl md:text-2xl font-bold mb-4 text-bege">Você merece ser vista!</h2>
+        <br>
+        <a target="_blank" class="whatsapp-link inline-block bg-laranja text-bege text-xl font-bold px-10 py-4 rounded-full hover:bg-white hover:text-vinho transition duration-300 shadow-xl transform hover:scale-105">
+            AGENDAR CALL DIAGNÓSTICA
+        </a>
+    </div>
+
     </section>
 
-    <footer class="bg-gray-900 text-creme py-10">
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-bege py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
                 <!-- Column 1: Logo and Description -->
                 <div>
-                    <a href="#" class="text-3xl font-display font-bold text-dourado tracking-wider">Beher<span class="text-creme">.</span></a>
-                    <p class="text-sm mt-2 text-gray-400">Acelerando negócios femininos com excelência e visão.</p>
+                    <a href="#" class="text-3xl font-display font-bold text-laranja tracking-wider">Beher<span class="text-bege">.</span></a>
+                    <p class="text-sm mt-2 text-bege">Acelerando negócios femininos com excelência e visão.</p>
                 </div>
                 <!-- Column 2: Quick Links -->
                 <div>
                     <h5 class="text-white font-semibold mb-3 uppercase text-sm">Navegação</h5>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#metodologia" class="hover:text-dourado transition">Metodologia</a></li>
-                        <li><a href="#servicos" class="hover:text-dourado transition">Serviços</a></li>
-                        <li><a href="#pacotes" class="hover:text-dourado transition">Pacotes</a></li>
-                        <li><a href="#sobre" class="hover:text-dourado transition">Sobre Nós</a></li>
-                        <li><a href="#contato" class="hover:text-dourado transition">Contato</a></li>
+                        <li><a href="#metodologia" class="hover:text-laranja transition">Metodologia</a></li>
+                        <li><a href="#servicos" class="hover:text-laranja transition">Serviços</a></li>
+                        <li><a href="#planos" class="hover:text-laranja transition">Planos</a></li>
+                        <li><a href="#comunidade" class="hover:text-laranja transition">Comunidade</a></li>
+                        <li><a href="#sobre" class="hover:text-laranja transition">Sobre Nós</a></li>
+                        <li><a href="#contato" class="hover:text-laranja transition">Contato</a></li>
                     </ul>
                 </div>
                 <!-- Column 3: Help & Contact -->
                 <div>
                     <h5 class="text-white font-semibold mb-3 uppercase text-sm">Suporte</h5>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#" class="hover:text-dourado transition">FAQ</a></li>
-                        <li><a href="#" class="hover:text-dourado transition">Política de Privacidade</a></li>
-                        <li><a href="mailto:contato@beher.com.br" class="hover:text-dourado transition">E-mail</a></li>
+                        <li><a href="#" class="hover:text-laranja transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-laranja transition">Política de Privacidade</a></li>
+                        <li><a href="mailto:contato@beher.com.br" class="hover:text-laranja transition">E-mail</a></li>
                     </ul>
                 </div>
                 <!-- Column 4: Social Media -->
                 <div>
                     <h5 class="text-white font-semibold mb-3 uppercase text-sm">Conecte-se</h5>
                     <div class="flex space-x-4">
-                        <a href="#" class="hover:opacity-75 transition duration-300" aria-label="Instagram">
+                        <a href="https://www.instagram.com/beher.business/" class="hover:opacity-75 transition duration-300" aria-label="Instagram">
                             <img src="images/logos/instagram.png" alt="Logo Instagram" class="w-6 h-6 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/24x24/343a40/ffffff?text=IG';" />
                         </a>
-                        <a href="#" class="hover:opacity-75 transition duration-300" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/company/beher-business/" class="hover:opacity-75 transition duration-300" aria-label="LinkedIn">
                             <img src="images/logos/linkedin.png" alt="Logo LinkedIn" class="w-6 h-6 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/24x24/343a40/ffffff?text=LI';" />
                         </a>
                     </div>
@@ -445,6 +810,15 @@
             </div>
         </div>
     </footer>
+
+<!-- WhatsApp Floating Btn -->
+<a class="whatsapp-link fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition duration-300 z-50"
+   target="_blank" aria-label="Fale conosco no WhatsApp">
+   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+     <path d="M20.52 3.48A11.82 11.82 0 0 0 12 0C5.37 0 .02 5.35.02 11.96a11.86 11.86 0 0 0 1.6 5.96L0 24l6.25-1.64A11.93 11.93 0 0 0 12 23.92h.01c6.62 0 11.97-5.35 11.99-11.96 0-3.21-1.25-6.23-3.48-8.48zM12 21.54h-.01a9.56 9.56 0 0 1-4.86-1.31l-.35-.21-3.72.97.99-3.63-.23-.37a9.5 9.5 0 0 1-1.43-4.98C2.39 6.59 6.59 2.4 12 2.4c2.57 0 4.99 1 6.81 2.82a9.56 9.56 0 0 1 2.8 6.77c-.01 5.41-4.21 9.55-9.61 9.55zm5.28-7.22c-.29-.15-1.71-.84-1.98-.94-.27-.1-.47-.15-.66.15s-.76.94-.93 1.13c-.17.19-.34.21-.63.07a7.82 7.82 0 0 1-2.3-1.42 8.56 8.56 0 0 1-1.59-1.96c-.17-.29-.02-.44.13-.59.14-.14.29-.37.43-.55.15-.18.19-.31.29-.52.1-.21.05-.39-.02-.55-.07-.15-.66-1.6-.91-2.19-.24-.58-.49-.5-.66-.5h-.57c-.19 0-.5.07-.76.36s-.99.97-.99 2.37 1.02 2.75 1.16 2.94c.14.18 2.01 3.07 4.86 4.3.68.29 1.21.46 1.62.58.68.22 1.3.19 1.79.11.55-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.11-.26-.18-.55-.33z"/>
+   </svg>
+</a>
+
 
 </body>
 </html>

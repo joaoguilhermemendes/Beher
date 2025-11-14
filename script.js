@@ -2,10 +2,11 @@ tailwind.config = {
     theme: {
         extend: {
             colors: {
-                'bordo': '#7d0a28', 
-                'bordo-light': '#a84c68', 
-                'dourado': '#d4af37', 
-                'creme': '#f5f5f5',
+                'vinho': '#67061d', 
+                'vinho-light': '#f294aa', 
+                'laranja': '#c73e04', 
+                'bege': '#ffecce',
+                'bege-light': '#fff5e6',
             },
             boxShadow: {
                 'premium': '0 10px 30px rgba(125, 10, 40, 0.1), 0 4px 6px rgba(125, 10, 40, 0.05)',
@@ -54,3 +55,37 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'Escape') closeMenu();
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const whatsappNumber = "5522981478996";
+  const message = "Olá! Eu adoraria saber mais sobre os serviços disponíveis.";
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  const whatsappLinks = document.querySelectorAll(".whatsapp-link");
+
+  whatsappLinks.forEach(link => {
+    link.href = whatsappURL;
+  });
+});
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxJF8FxtHqxMnO7_R1Y7fQLCKR8QZ1YeXbUVVmVmGWIkemXxdPCLVn5NUC6C1ujY_-MoA/exec';
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('lead-form');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    fetch(scriptURL, { method: 'POST', body: formData })
+      .then(response => {
+        if (response.ok) {
+          alert('✅ Formulário enviado com sucesso!');
+          form.reset();
+        } else {
+          alert('❌ Erro ao enviar o formulário. Tente novamente.');
+        }
+      })
+      .catch(error => alert('⚠️ Erro de conexão: ' + error.message));
+  });
+});
+
