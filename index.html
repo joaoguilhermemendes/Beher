@@ -65,10 +65,18 @@
     </header>
 
     <!-- HERO SECTION - INICIO -->
-    <section id="hero" class="relative overflow-hidden pt-32 md:pt-40 pb-20 md:pt-46 md:pb-24 md:bg-[url('./images/background/hero.png')] bg-[url('./images/background/hero-mobile.jpg')] bg-bottom bg-cover bg-no-repeat border-b border-gray-200">
+    <section id="hero" class="relative overflow-hidden 
+           bg-vinho
+           bg-[url('./images/background/hero-mobile.jpg')]
+           md:bg-[url('./images/background/hero.png')]
+           bg-no-repeat
+           bg-contain bg-top       
+           md:bg-cover md:bg-bottom
+           pt-32 md:pt-40 pb-20 md:pb-24
+           border-b border-gray-200">
         
         <!-- Dark & Grain Overlay -->
-        <div class="absolute inset-0 bg-black/60 mix-blend-multiply z-0"></div>
+        <div class="absolute inset-0 bg-black/60 md mix-blend-multiply z-0"></div>
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] opacity-20 mix-blend-overlay z-0"></div>
         <div class="absolute inset-0 backdrop-blur-[1px] z-0"></div>
 
