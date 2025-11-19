@@ -68,7 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbwx2HnRgPaXt6NlvvbZFo_IXLpk8bFL1ldHjTKdiyz5mkMLpYnrzFS-SsYGQ5Xn8HkWPQ/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbzFtSWM4fsOJ-7oj6hz7YGVbajd6fuf2D7_GK4XKIx4Qu9vBZjJmhO7mIxBWRO9rwApNg/exec";
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("lead-form");
 
@@ -78,12 +79,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(form);
     const params = new URLSearchParams();
 
-    formData.forEach((value, key) => {
-      params.append(key, value);
-    });
+    formData.forEach((value, key) => params.append(key, value));
 
     fetch(`${scriptURL}?${params.toString()}`, { method: "GET" })
-      .then((res) => res.json())
+      .then((res) => res.text())   // ← AQUI É O QUE RESOLVE
       .then(() => {
         alert("✅ Formulário enviado com sucesso!");
         form.reset();
@@ -91,4 +90,3 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((err) => alert("⚠️ Erro: " + err));
   });
 });
-
