@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbzFtSWM4fsOJ-7oj6hz7YGVbajd6fuf2D7_GK4XKIx4Qu9vBZjJmhO7mIxBWRO9rwApNg/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbwx2HnRgPaXt6NlvvbZFo_IXLpk8bFL1ldHjTKdiyz5mkMLpYnrzFS-SsYGQ5Xn8HkWPQ/exec";
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("lead-form");
 
