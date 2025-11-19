@@ -68,24 +68,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyNnfUINW-2HBJy7Ekj2CMV183glsK8nz3prsxmT4oM4IlZTXi623Nbg4BCt8DCYHcv5Q/exec';
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('lead-form');
+const scriptURL = "https://script.google.com/macros/s/AKfycbzFtSWM4fsOJ-7oj6hz7YGVbajd6fuf2D7_GK4XKIx4Qu9vBZjJmhO7mIxBWRO9rwApNg/exec";
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("lead-form");
 
-  form.addEventListener('submit', e => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const formData = new FormData(form);
 
-    fetch(scriptURL, { method: 'POST', body: formData })
-      .then(response => {
-        if (response.ok) {
-          alert('✅ Formulário enviado com sucesso!');
-          form.reset();
-        } else {
-          alert('❌ Erro ao enviar o formulário. Tente novamente.');
-        }
+    const formData = new FormData(form);
+    const params = new URLSearchParams();
+
+    formData.forEach((value, key) => {
+      params.append(key, value);
+    });
+
+    fetch(`${scriptURL}?${params.toString()}`, { method: "GET" })
+      .then((res) => res.json())
+      .then(() => {
+        alert("✅ Formulário enviado com sucesso!");
+        form.reset();
       })
-      .catch(error => alert('⚠️ Erro de conexão: ' + error.message));
+      .catch((err) => alert("⚠️ Erro: " + err));
   });
 });
 
