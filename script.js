@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const scriptURL = "https://script.google.com/macros/s/AKfycbyPOElUHexepXrd51MsmxHkuRtboc5YW_qVLCkYUQhwB-obEuGNeCpKPpmxPS7EEBirFQ/exec";
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("lead-form");
 
@@ -89,4 +88,69 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((err) => alert("⚠️ Erro: " + err));
   });
+});
+
+
+// Animations
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".reveal");
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    items.forEach(el => observer.observe(el));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".reveal-side");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const stats = document.querySelectorAll(".stat-animate");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  stats.forEach((stat) => observer.observe(stat));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeSections = document.querySelectorAll(".fade-section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  fadeSections.forEach((sec) => observer.observe(sec));
 });
