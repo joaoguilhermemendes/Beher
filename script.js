@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 entry.target.classList.add("visible");
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.9 });
 
     items.forEach(el => observer.observe(el));
 });
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.9 });
 
     elements.forEach(el => observer.observe(el));
 });
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.9 }
   );
 
   stats.forEach((stat) => observer.observe(stat));
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.9 }
   );
 
   fadeSections.forEach((sec) => observer.observe(sec));
