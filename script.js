@@ -93,46 +93,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Animations
 document.addEventListener("DOMContentLoaded", () => {
-    const items = document.querySelectorAll(".reveal");
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
-        });
-    }, { threshold: 0.9 });
+  const items = document.querySelectorAll(".reveal");
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.1 });
 
-    items.forEach(el => observer.observe(el));
+  items.forEach(el => observer.observe(el));
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".reveal-side");
+  const elements = document.querySelectorAll(".reveal-side");
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.9 });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
 
-    elements.forEach(el => observer.observe(el));
+  elements.forEach(el => observer.observe(el));
 });
 
 document.addEventListener("DOMContentLoaded", () => {
   const stats = document.querySelectorAll(".stat-animate");
 
   const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.9 }
+  (entries) => {
+    entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+    });
+  },
+  { threshold: 0.1 }
   );
 
   stats.forEach((stat) => observer.observe(stat));
@@ -142,14 +142,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const fadeSections = document.querySelectorAll(".fade-section");
 
   const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.9 }
+  (entries) => {
+    entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+    });
+  },
+  { threshold: 0.1 }
   );
 
   fadeSections.forEach((sec) => observer.observe(sec));
