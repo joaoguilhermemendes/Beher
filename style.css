@@ -87,34 +87,6 @@
     transform: translateX(0);
 }
 
-@media (max-width: 640px) { /* sm breakpoint */
-  .typing-effect {
-    animation: none !important;
-    border-right: none !important;
-    white-space: normal !important;
-    overflow: visible !important;
-    width: auto !important;
-  }
-}
-
-.typing-effect {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: .15em solid #67061d; 
-    width: 0;
-    animation: typing 4s steps(100, end) forwards,
-               blink .75s step-end 500ms infinite;
-}
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 86%; }
-}
-
-@keyframes blink {
-    50% { border-color: transparent; }
-}
-
 .stat-animate {
   opacity: 0;
   transform: translateY(50px);
